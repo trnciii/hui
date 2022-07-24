@@ -138,7 +138,6 @@ class Home:
 		self.devices = {}
 
 		try:
-			print("using local device list")
 			src = json.load(open(path_devices, "r"))
 		except:
 			print("fetchig device list from server")

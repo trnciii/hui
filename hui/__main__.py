@@ -42,6 +42,8 @@ def execute(home, cmd):
 
 def interactive():
 	home = Home()
+	print(home.status())
+
 	while(True):
 		try:
 			home.update()
@@ -61,13 +63,10 @@ def interactive():
 
 
 def main():
-	print('running', util.running(), end=' ')
-
 	if len(sys.argv)>1:
-		print('(Oneliner)')
 		print(execute(Home(), sys.argv[1:]))
 	else:
-		print('(Interactive)')
+		print('running', util.running())
 		interactive()
 
 
